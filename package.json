@@ -1,0 +1,24 @@
+{
+	"name": "protractor-automation",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"jasmine": "protractor conf.js",
+		"cucumber": "protractor cucumber.conf.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"jasmine-spec-reporter": "^4.2.1",
+		"protractor-cucumber-framework": "^6.1.2"
+	},
+	"dependencies": {
+		"chai": "^4.2.0",
+		"chakram": "^1.5.0",
+		"cucumber": "^5.1.0",
+		"jasmine": "^3.4.0",
+		"protractor-http-client": "^1.0.4"
+	}
+}
