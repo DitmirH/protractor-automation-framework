@@ -1,8 +1,11 @@
+// import calculator from './calculatorPage';
+var calculator = require('../pages/calculatorPage');
+
 describe('Angular App', function() {
-	const firstNumber = element(by.model('first'));
-	const secondNumber = element(by.model('second'));
+	// const firstNumber = element(by.model('first'));
+	// const secondNumber = element(by.model('second'));
 	const goBtn = element(by.id('gobutton'));
-	const operatorSelect = element(by.model('operator'));
+	// const operatorSelect = element(by.model('operator'));
 	const result = element.all(by.css('.ng-binding')).first();
 
 	it('goes to the calculator page ', function() {
@@ -10,12 +13,12 @@ describe('Angular App', function() {
 	});
 
 	it('fills in the numbers required ', function() {
-		firstNumber.sendKeys('6');
-		secondNumber.sendKeys('6');
+		calculator.setNumbers(6, 6);
 	});
 
 	it('selects the addition operator ', function() {
-		operatorSelect.$('[value="DIVISION"]').click();
+		// operatorSelect.$('[value="DIVISION"]').click();
+		calculator.operatorSelect('ADDITION');
 		goBtn.click();
 	});
 
