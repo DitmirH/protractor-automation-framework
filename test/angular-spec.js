@@ -1,7 +1,14 @@
 // import calculator from './calculatorPage';
+require('dotenv').config();
 var calculator = require('../pages/calculatorPage');
 
-describe('Angular App', function() {
+describe('Test a calculator angular application', function() {
+	after(function() {
+		browser.executeScript('window.sessionStorage.clear();');
+		console.log('session Cleared ');
+		browser.executeScript('window.localStorage.clear();');
+		console.log('cookies Cleared');
+	});
 	// const firstNumber = element(by.model('first'));
 	// const secondNumber = element(by.model('second'));
 	const goBtn = element(by.id('gobutton'));
@@ -10,6 +17,7 @@ describe('Angular App', function() {
 
 	it('goes to the calculator page ', function() {
 		browser.get('http://www.way2automation.com/angularjs-protractor/calc/');
+		console.log('><><><><><><><><><><', process.env.DITMIR_HASANI);
 	});
 
 	it('fills in the numbers required ', function() {
